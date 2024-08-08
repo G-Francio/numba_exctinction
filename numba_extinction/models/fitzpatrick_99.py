@@ -95,7 +95,7 @@ def F_Fi99(x, th=5.9):
     # see FM90 for this 5.9, eq. 4 in the referece above
     # defaults to this number for lack of a better option
     if x < th:
-        return 0
+        return 0.0
     else:
         return 0.5392 * (x - th) ** 2 + 0.05644 * (x - th) ** 3
 

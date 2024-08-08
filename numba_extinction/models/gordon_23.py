@@ -120,7 +120,7 @@ def F_Go23(x, th=5.9):
     # see FM90 for this 5.9, eq. 4 in the referece above
     # defaults to this number for lack of a better option
     if x < th:
-        return 0
+        return 0.0
     else:
         return 0.5392 * (x - th) ** 2 + 0.05644 * (x - th) ** 3
 
@@ -238,4 +238,16 @@ def compute_exctinction(wave, a_v, r_v):
     for i in nb.prange(len(wave)):
         a, b = Go23_inum(wave[i], x[i])
         out[i] = a_v * (a + b * (1 / r_v - 1 / 3.1))
+    return out
+
+
+# =========================================================================== #
+
+
+@nb.jit(parallel=True)
+def compute_exctinction_many(wave, a_v, r_v):
+    out = np.empty(wave.shape, dtype=np.float64)
+    for i in nb.prange(wave.shape[0]):
+        out[i] = compute_exctinction(wave[i], a_v[i], r_v)
+
     return out

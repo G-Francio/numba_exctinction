@@ -34,7 +34,7 @@ FM07_params = np.array(
 def F_FM07(x, th=6.097):
     # defaults to the actual threshold for lack of a better option
     if x < th:
-        return 0
+        return 0.0
     else:
         return (x - th) ** 2
 

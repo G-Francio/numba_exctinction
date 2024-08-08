@@ -341,4 +341,7 @@ def Go23(wave: units.AA, a_v, r_v):
             "to `astropy.units.AA`"
         )
 
-    return Go23_.compute_exctinction(wave.to(units.micron).value, a_v, r_v)
+    if wave.ndim == 1:
+        return Go23_.compute_exctinction(wave.to(units.micron).value, a_v, r_v)
+    else:
+        return Go23_.compute_exctinction_many(wave.to(units.micron).value, a_v, r_v)
