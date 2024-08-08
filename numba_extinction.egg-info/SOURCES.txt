@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+numba_extinction/__init__.py
+numba_extinction/extinction.py
+numba_extinction/main.py
+numba_extinction.egg-info/PKG-INFO
+numba_extinction.egg-info/SOURCES.txt
+numba_extinction.egg-info/dependency_links.txt
+numba_extinction.egg-info/requires.txt
+numba_extinction.egg-info/top_level.txt
