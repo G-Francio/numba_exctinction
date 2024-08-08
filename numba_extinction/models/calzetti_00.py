@@ -32,7 +32,7 @@ def calzetti00_invum(x, r_v):
 
 
 @nb.jit
-def compute_calzetti00_extinction(wave, a_v, r_v):
+def compute_extinction(wave, a_v, r_v):
     out = np.empty(len(wave), dtype=np.float64)
     i_wave = helpers.aa_to_invum(wave)
     for i in range(len(wave)):

@@ -227,7 +227,7 @@ def Go23_inum(lambda_, x):
 
 
 @nb.jit(parallel=True)
-def compute_Go23_exctinction(wave, a_v, r_v):
+def compute_exctinction(wave, a_v, r_v):
     out = np.empty(len(wave), dtype=np.float64)
 
     # This is a bit of a mix between wave and inverse wave, so we do the conversion here

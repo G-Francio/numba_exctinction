@@ -115,7 +115,7 @@ def ccm89_invum(x):
 
 
 @nb.jit
-def compute_ccm89_exctinction(wave, a_v, r_v):
+def compute_exctinction(wave, a_v, r_v):
     out = np.empty(len(wave), dtype=np.float64)
     for i in range(len(wave)):
         a, b = ccm89_invum(helpers.aa_to_invum(wave[i]))

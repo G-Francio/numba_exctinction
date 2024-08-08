@@ -130,7 +130,7 @@ def Fi99_uv_invum(x, a_v, r_v, params):
 
 
 @nb.jit
-def compute_Fi99_exctinction(wave, a_v, r_v, params, x_knots, y_knots, a, b):
+def compute_exctinction(wave, a_v, r_v, params, x_knots, y_knots, a, b):
     x = helpers.aa_to_invum(wave)
     out = np.empty(len(x), dtype=np.float64)
 
