@@ -1,6 +1,0 @@
-numpy
-numba
-astropy
-nbsphinx
-nbsphinx-link
-sphinx-rtd-theme
