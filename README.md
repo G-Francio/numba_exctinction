@@ -3,7 +3,7 @@ Numba'd version of the [`extinction`](https://github.com/kbarbary/extinction) pa
 
 The exctinction curves reproduce exactly (up to some e-15 due to float math) the curves produced by `extinction`. In addition, an equivalent implementation of the UV to IR extinction curve by [Gordon et al. 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...950...86G/abstract) was implemented, and checked against `dust_extinction` for consistency.
 
-I encourage you to check both packages out! `dust_exctinction` in particular is much more fleshed out and complete than the current package. Eventually I might try to implement all of the curves available there, but that is if I'll have time in the future.
+I encourage you to check both packages out! `dust_exctinction` in particular is much more fleshed out and complete than the this package. Eventually I might try to implement all of the curves available there, but that is if I'll have time in the future.
 
 ### Install instruction
 - clone the repository: `git clone git@github.com:G-Francio/numba_exctinction.git`
